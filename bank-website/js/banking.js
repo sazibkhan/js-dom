@@ -12,6 +12,18 @@ document.getElementById('deposit-submit').addEventListener('click', function () 
     totalDipisit.innerText = newTotalDeposit;
 
 
+    // update Account Balance
+    const totalBalance = document.getElementById('total-balance');
+    const totalBalanceText = totalBalance.innerText;
+    const previousTotalBalance = parseFloat(totalBalanceText);
+
+    const newBlanceTotal = previousTotalBalance + newTotalDeposit;
+    totalBalance.innerText = newBlanceTotal;
+
+
+
+
+
 
 
 
