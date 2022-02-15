@@ -3,16 +3,17 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
     const depositInput = document.getElementById('deposit-input');
     const depositAmountText = depositInput.value;
     const depositAmount = parseFloat(depositAmountText);
-    //set Balance Total
-    const totalDipisit = document.getElementById('total-dipisit');
-    const previousDipisitText = totalDipisit.innerText;
-    const previousDipisitAmount = parseFloat(previousDipisitText);
 
-    const newTotalDeposit = parseFloat(previousDipisitAmount + depositAmount);
-    totalDipisit.innerText = newTotalDeposit;
+    // update deposit total
+    const totalDeposit = document.getElementById('total-dipisit');
+    const previousDepositText = totalDeposit.innerText;
+    const previousDepositAmount = parseFloat(previousDepositText);
+
+    const newTotalDeposit = previousDepositAmount + depositAmount;
+    totalDeposit.innerText = newTotalDeposit;
 
 
-    //Update Balance Total
+    // update account balance 
     const totalBalance = document.getElementById('total-balance');
     const totalBalanceText = totalBalance.innerText;
     const previousTotalBalance = parseFloat(totalBalanceText);
@@ -20,7 +21,7 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
     const newBlanceTotal = previousTotalBalance + newTotalDeposit;
     totalBalance.innerText = newBlanceTotal;
 
-    //clear the diposit input field
+    // clear the deposit input field
     depositInput.value = "";
 
 });

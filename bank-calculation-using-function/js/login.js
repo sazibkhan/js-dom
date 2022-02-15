@@ -1,18 +1,12 @@
 document.getElementById('login-submit').addEventListener('click', function () {
-    //get User Email
+    // get user email
     const emailField = document.getElementById('user-email');
     const userEmail = emailField.value;
-
-    //get User Password
+    // get user password
     const passwordField = document.getElementById('user-password');
     const userPassword = passwordField.value;
-
-    //chack Email and Password
+    // check email and password
     if (userEmail == 'user@gmail.com' && userPassword == 'user') {
-        console.log('valid user');
         window.location.href = 'banking.html';
-
     }
 });
-
-
