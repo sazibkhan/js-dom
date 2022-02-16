@@ -24,10 +24,26 @@ document.getElementById('key-pad').addEventListener('click',
             if (number == 'C') {
                 calcInput.value = '';
             }
-        }
-        else {
+        } else {
             const previusNumber = calcInput.value;
             const newNumber = previusNumber + number;
             calcInput.value = newNumber;
         }
-    })
+    });
+
+function vetifyPin() {
+    const pin = document.getElementById('displayPin-input').value;
+    const typedNumbers = document.getElementById('typed-numbers').value;
+
+    const successMassage = document.getElementById('notify-success');
+    const failError = document.getElementById('notify-fail');
+    if (pin == typedNumbers) {
+        successMassage.style.display = 'block';
+        failError.style.display = 'none';
+    } else {
+        failError.style.display = 'block';
+        successMassage.style.display = 'none';
+    }
+}
+
+
